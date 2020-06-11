@@ -175,6 +175,7 @@ class Ratslider extends RatsliderCore{
 		}
 
 		// set global constants
+		this.animationEnd=animationEnd
 		this.props=props;
 		this.metadata=super.getMetadata()
 		this.containerElement=this.metadata.container
@@ -201,7 +202,7 @@ class Ratslider extends RatsliderCore{
 				this.setAttribute(slide,this.defaultAttr)
 			}
 			slide.addEventListener("animationend",(a)=>{
-				a.animationName=='in-reverse'||a.animationName=='in-foward'? typeof animationEnd=='function'?animationEnd(a):null:null;
+				a.animationName=='in-reverse'||a.animationName=='in-foward'? typeof this.animationEnd=='function'?this.animationEnd(a):null:null;
 			}, false);
 		})
 
