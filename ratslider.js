@@ -192,7 +192,7 @@ class Ratslider extends RatsliderCore{
 	}
 	create(){
 		var handlers=document.querySelectorAll(this.props.id+' span.handler')
-		var dots=document.querySelector('[ratslider=container] div.dotHandler')
+		var dots=document.querySelector('#'+this.props.id +'div.dotHandler')
 
 		super.setCurrentSlide(0);
 		this.setAttribute(this.containerElement,this.containerAttr)
